@@ -15,6 +15,26 @@ using namespace std;
  冒泡算法
  */
 
+/*
+ 查找数组中重复的数字(时间复杂度O(N))
+ */
+int findRepeatNum(){
+    int i;
+    int temp =0;
+    int a[5] ={2,4,1,3,2};
+    int count[5] ={0};
+    for (i =0; i<5; i++) {
+        temp =a[i];
+        if (count[temp - 1] == 1) {
+            NSLog(@"重复的数为：%d",temp);
+            return temp;
+        }else{
+            count[temp - 1]++;
+        }
+    }
+    return 0;
+}
+
 template <typename T> //模版函数(泛型)
 /*
  选择排序
